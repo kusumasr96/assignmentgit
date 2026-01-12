@@ -1,0 +1,42 @@
+PS D:\git lab1\lab3> git config --global user.name kusumasr96
+PS D:\git lab1\lab3> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab3> git init
+Initialized empty Git repository in D:/git lab1/lab3/.git/
+PS D:\git lab1\lab3> git branch -m main master
+PS D:\git lab1\lab3> git add file
+PS D:\git lab1\lab3> git commit -m "file saved"
+[master (root-commit) 2b01c58] file saved
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file
+PS D:\git lab1\lab3> git add 3.c
+PS D:\git lab1\lab3> git stash -m "3.c stashed"
+Saved working directory and index state On master: 3.c stashed
+PS D:\git lab1\lab3> git add 4.c
+PS D:\git lab1\lab3> git stash -m "4.c stashed"
+Saved working directory and index state On master: 4.c stashed
+PS D:\git lab1\lab3> git add 5.c
+PS D:\git lab1\lab3> git stash -m "5.c stashed"
+Saved working directory and index state On master: 5.c stashed
+PS D:\git lab1\lab3> git stash list
+stash@{0}: On master: 5.c stashed
+stash@{1}: On master: 4.c stashed
+stash@{2}: On master: 3.c stashed
+PS D:\git lab1\lab3> git checkout -b feature
+Switched to a new branch 'feature'
+PS D:\git lab1\lab3> git stash apply 1
+On branch feature
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   4.c
+
+PS D:\git lab1\lab3> git stash list
+stash@{0}: On master: 5.c stashed
+stash@{1}: On master: 4.c stashed
+stash@{2}: On master: 3.c stashed
+PS D:\git lab1\lab3> git status
+On branch feature
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   4.c
+
+PS D:\git lab1\lab3> 

@@ -1,0 +1,28 @@
+PS D:\git lab1\lab10> git config --global user.name kusumasr96
+PS D:\git lab1\lab10> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab10> git init
+Initialized empty Git repository in D:/git lab1/lab10/.git/
+PS D:\git lab1\lab10> git branch -m main master
+PS D:\git lab1\lab10> git add file1.c
+PS D:\git lab1\lab10> git commit -m "file1.c added"
+[master (root-commit) 9ae3165] file1.c added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.c
+PS D:\git lab1\lab10> git add file2.c
+PS D:\git lab1\lab10> git commit -m "file2.c added"
+[master 076a354] file2.c added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.c
+PS D:\git lab1\lab10> git log --author kusumasr96 --since 2025-02-09 --until 2026-01-12
+commit 076a354cdc71a5b65e7a853e2c0d2e3b4a04ec30 (HEAD -> master)
+Author: kusumasr96 <kusumasr926@gmail.com>
+Date:   Mon Jan 12 00:15:41 2026 +0530
+
+    file2.c added
+
+commit 9ae3165bd239df28d32de35f877613248e0dced4
+Author: kusumasr96 <kusumasr926@gmail.com>
+Date:   Mon Jan 12 00:15:16 2026 +0530
+
+    file1.c added
+PS D:\git lab1\lab10> 

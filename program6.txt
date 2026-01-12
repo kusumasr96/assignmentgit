@@ -1,0 +1,62 @@
+PS D:\git lab1\lab6> git config --global user.name kusumasr96
+PS D:\git lab1\lab6> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab6> git init
+Initialized empty Git repository in D:/git lab1/lab6/.git/
+PS D:\git lab1\lab6> git branch -m main master        
+PS D:\git lab1\lab6> git add 1.c
+PS D:\git lab1\lab6> git commit -m "1.c commited"
+[master (root-commit) fe3a588] 1.c commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.c
+PS D:\git lab1\lab6> git checkout -b fb
+Switched to a new branch 'fb'
+PS D:\git lab1\lab6> git add 2.c
+PS D:\git lab1\lab6> git commit -m "2.c commited"
+[fb 58cb513] 2.c commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.c
+PS D:\git lab1\lab6> git add 3.c
+PS D:\git lab1\lab6> git commit -m "3.c commited"
+[fb bfa4326] 3.c commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3.c
+PS D:\git lab1\lab6> git switch master
+Switched to branch 'master'
+PS D:\git lab1\lab6> git add 4.c
+PS D:\git lab1\lab6> git commit -m "4.c commited"
+[master 81db43f] 4.c commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 4.c
+PS D:\git lab1\lab6> git merge fb -m "merge done"
+Merge made by the 'ort' strategy.
+ 2.c | 0
+ 3.c | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.c
+ create mode 100644 3.c
+PS D:\git lab1\lab6> git log --all --graph
+*   commit 00d9fcb48abb4f0d38ab3650833aa799b0d5f39a (HEAD -> master)
+|\  Merge: 81db43f bfa4326
+| | Author: kusumasr96 <kusumasr926@gmail.com>
+| | Date:   Sun Jan 11 14:16:57 2026 +0530
+| |
+| |     merge done
+| |
+| * commit bfa4326347727f0976fdb9f578e695ecb1926047 (fb)
+| | Author: kusumasr96 <kusumasr926@gmail.com>
+| | Date:   Sun Jan 11 14:16:00 2026 +0530
+| |
+| |     3.c commited
+| |
+| * commit 58cb513689ec569cef5f42f760fe5fc85b57fc48
+| | Author: kusumasr96 <kusumasr926@gmail.com>
+| | Date:   Sun Jan 11 14:15:33 2026 +0530
+| |
+| |     2.c commited
+| |
+* | commit 81db43f3b7b1e14c082a8115a32ef0fd51d8b460
+|/  Author: kusumasr96 <kusumasr926@gmail.com>
+|   Date:   Sun Jan 11 14:16:34 2026 +0530
+|
+|       4.c commited
+:

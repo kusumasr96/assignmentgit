@@ -1,0 +1,30 @@
+PS D:\git lab1\lab12> git config --global user.name kusumasr96
+PS D:\git lab1\lab12> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab12> git init
+Initialized empty Git repository in D:/git lab1/lab12/.git/
+PS D:\git lab1\lab12> git branch -m main master
+PS D:\git lab1\lab12> git add sum.c
+PS D:\git lab1\lab12> git commit -m "sum.c saved"
+[master (root-commit) 255c386] sum.c saved
+ 1 file changed, 6 insertions(+)
+ create mode 100644 sum.c
+PS D:\git lab1\lab12> git revert 255c3
+[master 5839772] Revert "sum.c saved"
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 sum.c
+PS D:\git lab1\lab12> git add multiply.c
+PS D:\git lab1\lab12> git commit -m "multiply.c saved"
+[master 50236e4] multiply.c saved
+ 1 file changed, 6 insertions(+)
+ create mode 100644 multiply.c
+PS D:\git lab1\lab12> git add multiply.c
+PS D:\git lab1\lab12> git commit -m "multiply.c updated"
+[master 78d1ec9] multiply.c updated
+ 1 file changed, 2 insertions(+)
+PS D:\git lab1\lab12> git revert 78d1e
+[master 769274a] Revert "multiply.c updated"
+ 1 file changed, 2 deletions(-)
+PS D:\git lab1\lab12> git revert 76927
+[master 5bc41fd] Reapply "multiply.c updated"
+ 1 file changed, 2 insertions(+)
+PS D:\git lab1\lab12> 

@@ -1,0 +1,57 @@
+PS D:\git lab1\lab8> git config --global user.name kusumasr96
+PS D:\git lab1\lab8> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab8> git init
+Reinitialized existing Git repository in D:/git lab1/lab8/.git/
+PS D:\git lab1\lab8> git add a.c
+PS D:\git lab1\lab8> git commit -m "a.c added"         
+[master 8cee2de] a.c added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a.c
+PS D:\git lab1\lab8> git checkout -b fbb
+Switched to a new branch 'fbb'
+PS D:\git lab1\lab8> git add b.c
+PS D:\git lab1\lab8> git commit -m "b.c added"
+[fbb e497123] b.c added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b.c
+PS D:\git lab1\lab8> git add d.c
+PS D:\git lab1\lab8> git commit -m "d.c added"
+[fbb 8c62f98] d.c added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 d.c
+PS D:\git lab1\lab8> git add e.c
+PS D:\git lab1\lab8> git commit -m "e.c added"
+[fbb 4ec3702] e.c added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 e.c
+PS D:\git lab1\lab8> git add f.c
+PS D:\git lab1\lab8> git commit -m "f.c added"
+[fbb 8db0cad] f.c added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 f.c
+PS D:\git lab1\lab8> git log --oneline
+8db0cad (HEAD -> fbb) f.c added
+4ec3702 e.c added
+8c62f98 d.c added
+e497123 b.c added
+8cee2de (master) a.c added
+PS D:\git lab1\lab8> git switch master
+Switched to branch 'master'
+PS D:\git lab1\lab8> git cherry-pick e49712^..8db0ca
+[master b37204e] b.c added
+ Date: Mon Jan 12 14:09:23 2026 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b.c
+[master 423b442] d.c added
+ Date: Mon Jan 12 14:09:51 2026 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 d.c
+[master c3a00dc] e.c added
+ Date: Mon Jan 12 14:10:32 2026 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 e.c
+[master 621a5e9] f.c added
+ Date: Mon Jan 12 14:11:03 2026 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 f.c
+PS D:\git lab1\lab8>

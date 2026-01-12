@@ -1,0 +1,51 @@
+PS D:\git lab1\lab5> git config --global user.name kusumasr96
+PS D:\git lab1\lab5> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab5> git init
+Initialized empty Git repository in D:/git lab1/lab5/.git/
+PS D:\git lab1\lab5> git branch -m main master
+PS D:\git lab1\lab5> git pull https://github.com/kusumasr96/5lab.git
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.72 KiB | 58.00 KiB/s, done.
+From https://github.com/kusumasr96/5lab
+ * branch            HEAD       -> FETCH_HEAD
+PS D:\git lab1\lab5> git checkout -b fb
+Switched to a new branch 'fb'
+PS D:\git lab1\lab5> git add 5.c
+PS D:\git lab1\lab5> git commit -m "5.c commited"
+[fb b66da79] 5.c commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 5.c
+PS D:\git lab1\lab5> git add 6.c
+PS D:\git lab1\lab5> git commit -m "6.c commited"
+[fb 1f8f9fc] 6.c commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 6.c
+PS D:\git lab1\lab5> git switch master
+Switched to branch 'master'
+PS D:\git lab1\lab5> git rebase fb
+Successfully rebased and updated refs/heads/master.
+PS D:\git lab1\lab5> git log --all --graph
+* commit 1f8f9fc841279cbef992005b26ce262e3746bdc1 (HEAD -> master, fb)
+| Author: kusumasr96 <kusumasr926@gmail.com>
+| Date:   Sun Jan 11 13:50:35 2026 +0530
+|
+|     6.c commited
+|
+* commit b66da7989dad4e46ab49ea81415319da8cd31884
+| Author: kusumasr96 <kusumasr926@gmail.com>
+| Date:   Sun Jan 11 13:50:05 2026 +0530
+|
+|     5.c commited
+|
+* commit 55481fe51cbf7b4a2fa50cd87df4c17c0ecdc60a
+| Author: kusumasr96 <kusumasr926@gmail.com>
+| Date:   Sun Jan 11 13:47:36 2026 +0530
+|
+|     Create file1
+|
+* commit 49c1d0f7ad36b264dfdda6d4876b008a6bcaa143
+  Author: kusumasr96 <kusumasr926@gmail.com>
+PS D:\git lab1\lab5> 

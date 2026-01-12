@@ -1,0 +1,46 @@
+PS D:\git lab1\lab9> git config --global user.name kusumasr96
+PS D:\git lab1\lab9> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab9> git init
+Initialized empty Git repository in D:/git lab1/lab9/.git/
+PS D:\git lab1\lab9> git branch -m main master        
+PS D:\git lab1\lab9> git add 1.c
+PS D:\git lab1\lab9> git commit -m "1.c added"        
+[master (root-commit) 423b758] 1.c added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.c
+PS D:\git lab1\lab9> git add 2.c
+PS D:\git lab1\lab9> git commit -m "2.c added"
+[master 581bc9a] 2.c added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.c
+PS D:\git lab1\lab9> git add 3.c
+PS D:\git lab1\lab9> git commit -m "3.c added"
+[master 291b125] 3.c added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3.c
+PS D:\git lab1\lab9> git add 4.c
+PS D:\git lab1\lab9> git commit -m "4.c added"
+[master 8666949] 4.c added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 4.c
+PS D:\git lab1\lab9> git log --oneline
+8666949 (HEAD -> master) 4.c added
+291b125 3.c added
+581bc9a 2.c added
+423b758 1.c added
+PS D:\git lab1\lab9> git show 291b125
+commit 291b125fa7c9cb78bf44e63b2e73b6d9e2ffe448
+Author: kusumasr96 <kusumasr926@gmail.com>
+Date:   Mon Jan 12 00:01:02 2026 +0530
+
+    3.c added
+
+diff --git a/3.c b/3.c
+new file mode 100644
+index 0000000..e69de29
+PS D:\git lab1\lab9> git log -n 4 --pretty=format:"%h-%an,%ar:%s"
+8666949-kusumasr96,2 minutes ago:4.c added
+291b125-kusumasr96,2 minutes ago:3.c added
+581bc9a-kusumasr96,3 minutes ago:2.c added
+423b758-kusumasr96,3 minutes ago:1.c added
+PS D:\git lab1\lab9>

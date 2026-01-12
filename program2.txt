@@ -1,0 +1,35 @@
+PS D:\git lab1\lab2> git config --global user.name kusumasr96
+PS D:\git lab1\lab2> git config --global user.email kusumasr926@gmail.com
+PS D:\git lab1\lab2> git init      
+Reinitialized existing Git repository in D:/git lab1/lab2/.git/
+PS D:\git lab1\lab2> git add 3.c   
+PS D:\git lab1\lab2> git commit -m "3.c commited"   
+[master 9403f03] 3.c commited
+ 1 file changed, 5 insertions(+)
+ create mode 100644 3.c
+PS D:\git lab1\lab2> git status
+On branch master
+no changes added to commit 
+PS D:\git lab1\lab2> git checkout -b fb
+Switched to a new branch 'fb'
+PS D:\git lab1\lab2> git add 4.c
+PS D:\git lab1\lab2> git commit -m "4.c commited"
+[fb 8cd4987] 4.c commited
+ 1 file changed, 1 insertion(+)
+ create mode 100644 4.c
+PS D:\git lab1\lab2> git add 5.c
+PS D:\git lab1\lab2> git commit -m "5.c commited"
+[fb 8d1c124] 5.c commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 5.c
+PS D:\git lab1\lab2> git switch master
+Switched to branch 'master'
+PS D:\git lab1\lab2> git merge fb
+Updating 9403f03..8d1c124
+Fast-forward
+ 4.c | 1 +
+ 5.c | 0
+ 2 files changed, 1 insertion(+)
+ create mode 100644 4.c
+ create mode 100644 5.c
+PS D:\git lab1\lab2> 
